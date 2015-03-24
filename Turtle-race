@@ -1,0 +1,25 @@
+import turtle              # 1.  import the modules
+import random
+wn = turtle.Screen()       # 2.  Create a screen
+wn.bgcolor('PeachPuff')
+
+renaldo = turtle.Turtle()    # 3.  Create two turtles
+messi = turtle.Turtle()
+renaldo.color('black')
+messi.color('blue')
+renaldo.shape('turtle')
+messi.shape('turtle')
+
+messi.up()                  # 4.  Move the turtles to their starting point
+renaldo.up()
+messi.goto(-100,20)
+renaldo.goto(-100,-20)
+
+for size in range(0,75,2):   # your code goes here
+    i = random.randrange(0,11)
+    messi.forward(i)
+    s = random.randrange(0,11)
+    renaldo.forward(s)
+    
+    
+wn.exitonclick()
