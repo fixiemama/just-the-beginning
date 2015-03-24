@@ -1,0 +1,21 @@
+import turtle
+wn = turtle.Screen()
+wn.bgcolor("white")
+
+jamal = turtle.Turtle()
+jamal.shape("turtle")
+jamal.color("darkpink")
+
+side = 45
+
+for aColor in ["aqua","turquoise","lightgreen","red"]:
+    jamal.fillcolor(aColor)
+    jamal.begin_fill()
+    for poly in [3,4,6,8]:
+        jamal.forward(side)
+        jamal.right(360/poly)
+    jamal.up()
+    jamal.end_fill()
+    jamal.right(90)            
+
+
