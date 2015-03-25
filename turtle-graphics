@@ -4,18 +4,23 @@ wn.bgcolor("white")
 
 jamal = turtle.Turtle()
 jamal.shape("turtle")
-jamal.color("darkpink")
+jamal.color("clear")
 
 side = 45
 
-for aColor in ["aqua","turquoise","lightgreen","red"]:
-    jamal.fillcolor(aColor)
-    jamal.begin_fill()
-    for poly in [3,4,6,8]:
-        jamal.forward(side)
-        jamal.right(360/poly)
-    jamal.up()
-    jamal.end_fill()
-    jamal.right(90)            
+for xloc in [-100,100]:
+    for yloc in [-100,100]:
+        jamal.up()
+        jamal.goto(xloc,yloc)
+        jamal.down()
+        for aColor in ["aqua","turquoise","lightgreen","red"]:
+            jamal.fillcolor(aColor)
+            jamal.begin_fill()
+            for poly in [3,4,6,8]:
+                jamal.forward(side)
+                jamal.right(360/poly)
+            jamal.up()
+            jamal.end_fill()        
+            jamal.right(90)
 
 
