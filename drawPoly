@@ -1,0 +1,27 @@
+import turtle
+def drawPoly(t,sz):
+    """Make the turtle draw a series of different colored polygons"""
+    for poly in [3,4,6,8]:
+        t.forward(sz)
+        t.right(360/poly)
+wn=turtle.Screen()
+wn.bgcolor("lightgrey")
+
+jamal=turtle.Turtle()
+jamal.color("red")
+jamal.shape("turtle")
+jamal.pensize(4)
+jamal.speed(0)
+jamal.goto(30,30)
+size = 45
+for i in range(15):
+    for aColor in ["aqua","turquoise","lightgreen","red"]:
+        jamal.fillcolor(aColor)
+        jamal.begin_fill()
+        drawPoly(jamal,size)
+        jamal.up()
+        jamal.end_fill()
+        jamal.forward(10)
+        jamal.right(18)
+            
+wn.exitonclick()
