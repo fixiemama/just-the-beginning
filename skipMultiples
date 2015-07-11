@@ -1,0 +1,55 @@
+# Hackbright Coding Challenge: skipMultiples
+# By Ginger Bisharat
+# March 29, 2015
+# With thanks to bmc for putting his "fortunes" collection on github for me to peruse. 
+# Other resources: www.jbox.dk/quotations.htm, and www.comp.nus.edu.sg/~damithch
+# Challenge: Write a function that prints all numbers between 1 and 50, skipping any multiples of 7 and replacing them with an inspirational quote of your choosing.
+import random
+quote = ['''"We are so lightly here. It is in love that we are made. In love we disappear." - Leonard Cohen''',
+         '''"Beauty is only skin deep, but ugly goes clean to the bone." - Dorothy Parker''',
+         '''"If you can't explain it simply, you don't understand it well enough." - Albert Einstein''',
+         '''"Optimists say the glass is half full, pessimists say the glass is half empty, engineers say the glass is twice as big as it needs to be." - Unknown''',
+         '''"All the world's a stage and most of us are desperately unrehearsed." - Sean O'Casey''',
+         '''"What garlic is to salad, insanity is to art." - Augustus Saint-Gaudens''',
+         '''"To be perfect is to have changed often." - J. H. Newman''',
+         '''"If I had any humility, I would be perfect." - Ted Turner''',
+         '''"Don't let your mouth write no check that your tail can't cash." - Bo Diddley''',
+         '''"A right is not what someone gives you; it's what no one can take from you." - Ramsey Clark''',
+         '''"Love is the only real thing worth doing. All else is secondary. If it helps love, it is good. All else is just a means, love is the end. So whatsoever the pain, go into love." - Osho''',
+         '''"And the day came when the risk to remain tight in a bud was more painful than the risk it took to blossom." - Anaies Nin''',
+         '''"Life shrinks or expands in proportion to one's courage" - Anaies Nin''',
+         '''"We can't solve problems by using the same kind of thinking we used when we created them." - Albert Einstein''',
+         '''"Unthinking respect for authority is the greatest enemy of truth." - Albert Einstein''',
+         '''"The aim [of education] must be the training of independently acting and thinking individuals who, however, see in the service to the community their highest life problem." - Albert Einstein''',
+         '''"Sing and dance together, but let each one of you be alone." - Khalil Gibran''',
+         '''"Love one another but make not a bond of love: Let it rather be a moving sea between the shores of your souls." - Khalil Gibran''',
+         '''"But let there be spaces in your togetherness, And let the winds of the heavens dance between you." - Khalil Gibran''',
+         '''"For even as love crowns you so shall he crucify you. Even as he is for your growth so is he for your pruning." - Khalil Gibran''',
+         '''"...let these be your desires: To melt and be like a running brook that sings its melody to the night. To know the pain of too much tenderness. To be wounded by your own understanding of love; And to bleed willingly and joyfully." - Khalil Gibran''',
+         '''"When you work you are a flute through whose heart the whispering of the hours turns to music." - Khalil Gibran''',
+         '''"Work is love made visible." - Khalil Gibran''',
+         '''"Design is not just what it looks like and feels like. Design is how it works." - Steve Jobs''',
+         '''"All we know about the new economic world tells us that nations which train engineer will prevail over those which train lawyers. No nation has ever sued its way to greatness." - Richard Lamm''',
+         '''"The fewer moving parts, the better." - Christian Cantrell''',
+         '''"This one went unusually smoothly. When I finished it, I remarked to a friend that I felt like an engineer who had designed a machine and then sat back and realized it did everything I'd set out to do. Which made him say, quite emphatically, 'No engineer has ever felt this.'" - Robert J. Bennett''',
+         '''"In engineering, that only is great which achieves. It matters not what the intention is, he who in the day of battle is not victorious is not saved by his intention." - Henry Ward Beecher''',
+         '''"It is by the choice of a suitable method of attack, that intricate problems are reduced to simple phenomena, and then easily solved." - Charles Proteus Steinmetz''',
+         '''"No one wants to learn by mistakes, but we cannot learn enough from successes to go beyond the state of the art." - Henry Petroski''',
+         '''"Science can amuse and fascinate us all, but it is engineering which changes the world." - Isaac Asimov''',
+         '''"In science it often happens that scientists say, 'You know that's a really good argument; my position is mistaken,' and then they would actually change their minds and you never hear that old view from them again. They really do it. It doesn't happen as often as it should, because scientists are human and change is sometimes painful. But it happens every day. I cannot recall the last time something like that happened in politics or religion." - Carl Sagan''',
+         '''"...Engineers operate at the interface between science and society..." - Dean Gordon Brown''',
+         '''"If something is worth doing once, it's worth building a tool to do it." - Unknown''',
+         '''"It's not the prevention of bugs but the recovery -- the ability to gracefully exterminate them -- that counts." - Victoria Livschitz''',
+         '''"When I am working on a problem, I never think about beauty. I think only of how to solve the problem. But when I have finished, if the solution is not beautiful, I know it is wrong." - R. Buckminster Fuller''',
+         '''"The wisest keeps something of the vision of a child. Though he may understand a thousand things that a child could not understand, he is always a beginner, close to the original meaning of life." - John Macy''',
+         '''"Done is better than perfect." - Fernando Ruarte''']
+# If I could use a local file, this would have been written to open a file of a lot more quotes, instead of using a
+# list, to lower the chance of a quote being selected more than once. But that was beyond the scope of this question.
+def skipMultiples(x,y):
+    for f in range(x+1):
+        if f % y == 0:
+            print(random.choice(quote))
+        else:
+            print(f)
+        
+skipMultiples(50,7)
