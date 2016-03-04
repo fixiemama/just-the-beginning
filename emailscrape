@@ -1,0 +1,25 @@
+function getemails() {
+  var label = GmailApp.getUserLabelByName("8. Reading & Profile");
+  var threads = label.getThreads();
+  
+  for (var i = 0; i < 100; i++) {  
+   var messages=threads[i].getMessages();  
+    var message=messages[0];
+    var subject=message.getSubject();
+     if(subject!=null)
+       Process1(message);
+  } 
+}
+
+function Process1(message) {
+  var body=message.getBody();
+  var regex= /(http(s)?:[//].)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/gi;
+  var URL=regex.exec(body);
+  if(URL!=null){
+    var id="1dpsA3_b2rAjaICnmLMy3ON8TB5XEJw1pbfh5EzgERy0";
+    var ss = SpreadsheetApp.openById(id);
+    var sheet = ss.getActiveSheet();
+    sheet.appendRow(URL);
+  }
+}
+  
